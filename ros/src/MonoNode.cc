@@ -26,8 +26,8 @@ int main(int argc, char **argv)
 
 
 MonoNode::MonoNode (ORB_SLAM2::System::eSensor sensor, ros::NodeHandle &node_handle, image_transport::ImageTransport &image_transport) : Node (sensor, node_handle, image_transport) {
-  image_subscriber = image_transport.subscribe ("/camera/image_raw", 1, &MonoNode::ImageCallback, this);
-  camera_info_topic_ = "/camera/camera_info";
+  image_subscriber = image_transport.subscribe ("/usb_cam/image_raw", 1, &MonoNode::ImageCallback, this);
+  camera_info_topic_ = "/usb_cam/camera_info";
 }
 
 
